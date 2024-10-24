@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Jannassl/lectureDemo1.git'
+                git 'https://github.com/Jannassl/localTestDemo_v1.git'
             }
         }
         stage('Run Tests') {
