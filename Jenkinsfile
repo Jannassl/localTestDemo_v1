@@ -29,6 +29,8 @@ pipeline {
                 bat 'mvn jacoco:report'
             }
         }
+
+
         stage('Publish Test Results') {
             steps {
                 // Publish JUnit test results
