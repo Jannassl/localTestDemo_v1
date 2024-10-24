@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Jannassl/localTestDemo_v1.git'
+                git branch: 'main', url: 'https://github.com/Jannassl/localTestDemo_v1.git'
             }
         }
         stage('Run Tests') {
@@ -29,8 +29,6 @@ pipeline {
                 bat 'mvn jacoco:report'
             }
         }
-
-
         stage('Publish Test Results') {
             steps {
                 // Publish JUnit test results
@@ -61,5 +59,3 @@ pipeline {
         }
     }
 }
-
-
