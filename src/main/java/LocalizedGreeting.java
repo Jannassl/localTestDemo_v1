@@ -18,6 +18,8 @@ public class LocalizedGreeting {
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
 
+
+
         // Set the locale based on user's choice
         Locale locale;
         switch (choice) {
