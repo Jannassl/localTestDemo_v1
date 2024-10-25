@@ -12,6 +12,8 @@ public class LocalizedGreeting {
         System.out.println("3. Spanish");
         System.out.println("4. Farsi");
         System.out.println("5. Japanese");
+        System.out.println("6. Russian");
+        System.out.println("7. Chinese");
 
         Scanner scanner = new Scanner(System.in);
         int choice = scanner.nextInt();
@@ -33,6 +35,12 @@ public class LocalizedGreeting {
                 break;
             case 5:
                 locale = new Locale("ja", "JP");
+                break;
+            case 6:
+                locale = new Locale("ru", "RU");
+                break;
+            case 7:
+                locale = new Locale("cn", "CN");
                 break;
             default:
                 System.out.println("Invalid choice. Defaulting to English.");

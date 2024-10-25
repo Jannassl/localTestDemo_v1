@@ -50,6 +50,20 @@ public class LocalizedGreetingTest {
         String greeting = messages.getString("greeting");
         assertEquals("こんにちは", greeting);
     }
+    @Test
+    public void testRussianGreeting(){
+        Locale locale = new Locale("ru", "RU");
+        ResourceBundle messages = ResourceBundle.getBundle("Messages", locale);
+        String greeting = messages.getString("greeting");
+        assertEquals("Привет", greeting);
+    }
+    @Test
+    public void testChineseGreeting(){
+        Locale locale = new Locale("cn", "CN");
+        ResourceBundle messages = ResourceBundle.getBundle("Messages", locale);
+        String greeting = messages.getString("greeting");
+        assertEquals("你好", greeting);
+    }
 
 }
 
