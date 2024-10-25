@@ -36,5 +36,13 @@ public class LocalizedGreetingTest {
         String greeting = messages.getString("greeting");
         assertEquals("Hello", greeting); // Expected default is English
     }
+    @Test
+    public void testFarsiGreeting() {
+        Locale locale = new Locale("fa", "IR");
+        ResourceBundle messages = ResourceBundle.getBundle("Messages", locale);
+        String greeting = messages.getString("greeting");
+        assertEquals("سلام! به برنامه ما خوش آمدید", greeting);
+    }
+
 }
 
